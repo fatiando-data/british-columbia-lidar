@@ -1,39 +1,34 @@
-<!--
-This is a template for datasets in the Fatiando a Terra collection.
+# British Columbia, Canada - Lidar point cloud
 
-When adding a new dataset, fill out the information below. Search for all
-instances of "CHANGEME" and replace with the relevant information.
+This is a point cloud sliced to the small
+[Trail Islands](https://apps.gov.bc.ca/pub/bcgnws/names/21973.html) to the
+North of Vancouver to reduce the data size.
+The islands have some nice looking topography and their isolated nature creates
+problems for some interpolation methods, like simple nearest-neighbors.
 
-You probably also want to edit the conda environment.yml file to give the
-environment a new name and add/remove dependencies.
-
-You can delete this comment once done.
--->
-
-# Location - Data type
-
-CHANGEME: A few sentences about the dataset and a plot should go here.
-
-![CHANGEME: The alt text of the image.](preview.jpg)
+![Lidar point cloud of ground elevation of the Trail Islands.](preview.jpg)
 
 | | Summary |
 |--:|:--|
-| File | `CHANGEME.csv` |
-| Size | CHANGEME Mb |
-| Version | [CHANGEME](https://github.com/fatiando-data/CHANGEME/releases/latest) |
-| DOI | https://doi.org/CHANGEME |
+| File | `british-columbia-lidar.csv.xz` |
+| Size | 4.4 Mb |
+| Version | [v1](https://github.com/fatiando-data/british-columbia-lidar/releases/latest) |
+| DOI | https://doi.org/10.5281/zenodo.5881887 |
 | License | [CC-BY](https://creativecommons.org/licenses/by/4.0/) |
-| MD5 | `md5:CHANGEME` |
-| SHA256 | `sha256:CHANGEME` |
-| Source | CHANGEME: Citation and/or link to original data source |
-| Original license | CHANGEME: License (with link) of the original source |
-| Processing code | [`prepare.ipynb`](https://nbviewer.org/github/fatiando-data/CHANGEME/blob/main/prepare.ipynb) |
+| MD5 | `md5:354c725a95036bd8340bc14e043ece5a` |
+| SHA256 | `sha256:03c6f1b99374b8c00c424c788cb6956bc00ab477244bb69835d4171312714fe1` |
+| Source | [LidarBC](https://www2.gov.bc.ca/gov/content/data/geographic-data-services/lidarbc) |
+| Original license | [Open Government Licence - British Columbia](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc) |
+| Processing code | [`prepare.ipynb`](https://nbviewer.org/github/fatiando-data/british-columbia-lidar/blob/main/prepare.ipynb) |
 
 ## Changes made
 
 > These are the changes made to the original dataset.
 
-* CHANGEME: List here changes made to the original data.
+* Cut out a section of the original data to focus only on these small islands.
+* Change UTM coordinates to geodetic latitude and longitude (WGS84).
+* Keep only the ground reflection picks.
+* Export to a compressed CSV for easier loading with Pandas.
 
 ## About this repository
 
